@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+
+{% block main %}
+{% if marker == "ul" %}
+<ul>
+  {% for prof in profs %}
+    <li>{{prof}}</li>
+  {% endfor %}
+</ul>
+{% elif marker == "ol" %}
+<ol>
+  {% for prof in profs %}
+    <li>{{prof}}</li>
+  {% endfor %}
+</ol>
+{% else %}
+<h1>Неверные данные</h1>
+{% endif %}
+{% endblock main %}
